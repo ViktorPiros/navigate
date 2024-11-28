@@ -1,16 +1,13 @@
-// explore.tsx
 import React from 'react';
 import { View, FlatList, Text, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native';
 
-// Определяем интерфейс для языков программирования
 interface Language {
     id: string;
     lang: string;
-    experience: string; // Опыт работы с языком
-    logoUrl: string; // URL логотипа языка
+    experience: string;
+    logoUrl: string;
 }
 
-// Массив языков программирования с ссылками на изображения
 const langs: Language[] = [
     { 
         id: '1', 
@@ -22,7 +19,7 @@ const langs: Language[] = [
         id: '2', 
         lang: 'SQL', 
         experience: '2 месяца', 
-        logoUrl: 'https://icons8.com/icons/set/sql'
+        logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png'
     },
     { 
         id: '3', 
@@ -32,10 +29,8 @@ const langs: Language[] = [
     },
 ];
 
-// Компонент для отображения отдельного языка программирования
 const LanguageItem = ({ lang }: { lang: Language }) => {
     const handlePress = () => {
-        // Открываем ссылку на Википедию (или другую страницу) при нажатии на изображение
         const url = `https://en.wikipedia.org/wiki/${lang.lang}`;
         Linking.openURL(url);
     };
@@ -51,7 +46,6 @@ const LanguageItem = ({ lang }: { lang: Language }) => {
     );
 };
 
-// Основной компонент экрана
 const ExploreScreen: React.FC = () => {
     return (
         <View style={styles.container}>
@@ -64,7 +58,6 @@ const ExploreScreen: React.FC = () => {
     );
 };
 
-// Стили для компонентов
 const styles = StyleSheet.create({
     container: {
         flex: 1,

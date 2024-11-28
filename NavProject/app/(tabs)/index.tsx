@@ -1,4 +1,3 @@
-// screens/AboutMeScreen.js
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
@@ -15,7 +14,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#3498db', // Измените цвет по желанию
+        backgroundColor: '#3498db',
     },
     text: {
         color: 'white',
